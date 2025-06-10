@@ -1,2 +1,2 @@
-# excahnge_integration
+# exchange_integration
 ExchangeRate Integration
