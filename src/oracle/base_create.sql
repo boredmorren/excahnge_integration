@@ -23,3 +23,14 @@ create table development.currency_history
 grant create session to development;
 grant select, insert, update, delete on development.currency_history to development;
 grant select_catalog_role to development;
+
+BEGIN
+    DBMS_NETWORK_ACL_ADMIN.ADD_PRIVILEGE(
+        acl         => 'NETWORK_ACL_31824324071D46ECAE8EEF9B8980FDB2',
+        principal   => 'DEVELOPMENT', 
+        is_grant    => TRUE,
+        privilege   => 'connect'
+    );
+    COMMIT;
+END;
+
